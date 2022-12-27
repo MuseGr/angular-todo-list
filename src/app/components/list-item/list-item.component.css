@@ -1,0 +1,49 @@
+@import url('https://css.gg/check-r.css');
+@import url('https://css.gg/close-r.css');
+@import url('https://css.gg/trash.css');
+p{
+    margin: 0;
+    padding: 0;
+}
+.list-item{
+    background-color: whitesmoke;
+    margin-top: 5px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-done{
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.btn-not-done{
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.btn-trash{
+  padding: 5;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: rgb(184, 14, 14);
+}
+.gg-check-r{
+    color: green;
+}
+.gg-close-r{
+    color: rgb(210, 13, 13);
+}
+.done{
+    text-decoration: line-through;
+    color: rgb(210, 13, 13);
+}
+.not-done{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,23 @@
+<div class="todolist-card">
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+      <h1>ToDo List</h1>
+      <h1 [ngClass]="{'red': itemsList.length === 8}">({{itemsList.length}})</h1>
+    </div>
+    <div class="separator"></div>
+    <div class="list-item-container">
+        <list-item *ngFor="let item of itemsList let i = index"
+                    [index]="i"
+                    [deleteMe]="deleteItem"
+                    [itemAssingment]="item.assingment"
+                    [itemStatus]="item.status"></list-item>
+    </div>
+    <div class="separator" *ngIf="itemsList.length==8"></div>
+    <div class="add-list-item">
+      <button class="add-list-item-btn" (click)="addItem()">
+        Add task
+      </button>
+      <input class="add-list-item-input" type="text"
+             placeholder="Add new item"
+             #addInput (keyup)="getValue(addInput.value)">
+    </div>
+</div>

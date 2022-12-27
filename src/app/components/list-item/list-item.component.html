@@ -1,0 +1,20 @@
+<div class="list-item">
+    <p [className]="!itemStatus ? 'done':'not-done'">{{itemAssingment}}</p>
+    <div style="display: flex; flex-direction: row;">
+      <button class="btn-done"
+            (click)="btnDone()"
+            *ngIf="itemStatus">
+        <i class="gg-check-r"></i>
+      </button>
+      <button class="btn-not-done"
+            (click)="btnDone()"
+            *ngIf="!itemStatus">
+        <i class="gg-close-r"></i>
+      </button>
+      <div style="width: 10px;"></div>
+      <button class="btn-trash"
+              (click)="btnDelete()">
+        <i class="gg-trash"></i>
+      </button>
+    </div>
+</div>
